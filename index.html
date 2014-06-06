@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=.9" />
+		<link rel="stylesheet" href="bower_components/twitter/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bower_components/twitter/dist/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/twitter/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="alertsController">
+			<br />
+			<button type="button" class="btn btn-default" ng-click="alert();">alert()</button>
+			<br />
+			<br />
+			<div class="alert alert-success" ng-class="{'alert-hide':alerts.success.hide}">{{alerts.success.message}}</div>
+			<div class="alert alert-info" ng-class="{'alert-hide':alerts.info.hide}">{{alerts.info.message}}</div>
+			<div class="alert alert-warning" ng-class="{'alert-hide':alerts.warning.hide}">{{alerts.warning.message}}</div>
+			<div class="alert alert-danger" ng-class="{'alert-hide':alerts.danger.hide}">{{alerts.danger.message}}</div>
+		</div>
+	</body>
+</html>
